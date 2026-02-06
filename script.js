@@ -8,7 +8,7 @@ async function send() {
   chat.innerHTML += `<div class="message user">You: ${msg}</div>`;
   input.value = "";
 
-  const res = await fetch("YOUR_RENDER_BACKEND_URL/chat", {
+  const res = await fetch("https://sipra-js-backend.onrender.com/chat", {
     method: "POST",
     headers: { "Content-Type": "application/json" },
     body: JSON.stringify({ message: msg })
